@@ -16,8 +16,9 @@ function handle(cmd, params) {
     if (!fun) {
         throw new Error("cmd= " + cmd + " 没有定义实现");
     }
-    log(fun(params))
-    return fun(params);
+    let ret =  fun(params)
+    log(ret)
+    return ret;
 }
 
 /**
